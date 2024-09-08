@@ -1,19 +1,19 @@
-import {  } from 'react'
+import {} from "react";
 
-import './App.css'
+import "./App.css";
 
-import Header from './components/Header'
-import Second from './components/Second'
+import Header from "./components/Header";
+import Second from "./components/Second";
+import Fotter from "./components/Fotter";
 
 function App() {
-
-
   return (
     <>
-      <Header/>
-     <Second/>
+      <Header />
+      <Second />
+      <Fotter/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

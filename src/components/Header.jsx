@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <div className="w-full h-screen bg-[#FAF7EE] ">
-        <nav className="w-full flex h-20 justify-between items-center px-8">
+        <nav className="w-full xl:flex lg:flex hidden h-20 justify-between items-center px-8">
           <div>
             <h1 className="bg-[#212826] text-gray-200 px-4  py-3 text-xs rounded-md">
               T:
@@ -28,7 +28,11 @@ const Header = () => {
             <h1>Press/for?</h1>
           </div>
         </nav>
-        <div className="flex justify-center mt-5">
+        <nav className="flex justify-between px-2">
+          <h1 className="px-2 py-1 lg:hidden bg-black text-yellow-50 text-2xl font-sans xl:hidden uppercase">toyfight</h1>
+          <h1 className="px-2 py-1 xl:hidden lg:hidden  text-2xl font-sans uppercase">menu</h1>
+        </nav>
+        <div className="flex lg:relative lg:bottom-12 justify-center mt-5">
           <video
             src="https://res.cloudinary.com/durdzswls/video/upload/q_90/v1/spline-fallbacks/game.webm?_a=DATAdtAAZAA0"
             // width={320}
@@ -59,9 +63,9 @@ const Header = () => {
               studio
             </h1>
           </div>
-          <div className="flex  w-full justify-between  px-5 ">
-            <h1 className="">creating experiences Since 2015</h1>
-            <div className="flex gap-2 items-center">
+          <div className="xl:flex  w-full xl:justify-between  px-5 ">
+            <h1 className="text-center lg:pt-3 pt-12 xl:pt-0">creating experiences Since 2015</h1>
+            <div className="xl:flex gap-2 items-center hidden">
               <h1 className="px-3  bg-yellow-400 text-xs ">say hii</h1>
               <h1 className="text-xs">hellow@toyfight.co</h1>
             </div>
