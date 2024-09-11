@@ -1,19 +1,25 @@
-import {} from "react";
+// import {} from "react";
 
-import "./App.css";
+// import "./App.css";
 
-import Header from "./components/Header";
-import Second from "./components/Second";
-import Fotter from "./components/Fotter";
+// // import Header from "./components/Header";
+// // import Second from "./components/Second";
+// // import Fotter from "./components/Fotter";
+// // import Loader from "./components/loader";
+// import Nav from "./components/Nav";
+// import End from "./components/End";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Second />
-      <Fotter/>
-    </>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//      <Nav/>
+// {/*   
+//       <Header />
+//       <Second />
+//       <Fotter/> */}
+//       <End/>
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;
