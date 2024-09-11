@@ -22,9 +22,9 @@ const Fotter = () => {
 
   return (
     <>
-      <div className="fotter min-h-[100vh]  w-full">
+      <div className="fotter min-h-[100vh] xl:mb-32  w-full">
         <div className="min-h-screen w-full px-8 lg:items-start  pt-32 lg:flex xl:flex justify-between">
-          <div className="relative xl:w-[50%] lg:w-1/2 lg:h-[80vh] xl:h-[100vh] h-[60vh] rounded-lg xl:rounded-none text-white bg-[#212826] flex flex-col py-7 justify-between pl-8">
+          <div className="relative xl:w-[50%] lg:w-1/2 lg:h-[80vh] xl:h-[100vh] h-[60vh] rounded-lg xl:rounded-none one text-white bg-[#212826] flex flex-col py-7 justify-between pl-8">
             <div className="flex flex-col gap-2 items-start">
               <h1 className="px-4 bg-[#2B3230] text-xl rounded-full py-1">
                 Alstro
@@ -39,7 +39,7 @@ const Fotter = () => {
               <h1 className=" px-2 text-xs bg-[#2B3230]">marketing</h1>
             </div>
           </div>
-          <div className="xl:w-1/2 lg:w-[49%] h-screen lg:pt-0 pt-12 xl:p-0 xl:flex flex-col gap-14 items-end xl:px-8 ">
+          <div className="xl:w-1/2 lg:w-[49%] one h-screen lg:pt-0 pt-12 xl:p-0 xl:flex flex-col gap-14 items-end xl:px-8 ">
             <div className="xl:w-[65%]  relative py-4 text-white flex flex-col justify-between items-end xl:px-8 h-[65vh] rounded-md bg-[#212826]   ">
               <div className="flex flex-col  text-white gap-2 items-end ">
                 <h1 className="px-4 bg-[#2B3230] text-xl rounded-md  py-2">
@@ -67,7 +67,7 @@ const Fotter = () => {
             </div>
             <div className="flex flex-col pt-11 xl:pt-0 gap-2 items-end">
               <h1 className=" text-4xl">Latest</h1>
-              <div className="flex justify-end gap-2 text-xs">
+              <div className="flex justify-end gap-2 text-xs font-sans">
                 <h1 className=" xl:px-3 px-1 py-1 rounded-md bg-[#FDEDD4]">
                   Awards
                 </h1>
@@ -75,15 +75,15 @@ const Fotter = () => {
                   2* Webby Wins with GSAP
                 </h1>
               </div>
-              <div className="flex justify-end gap-2 text-xs">
+              <div className="flex justify-end gap-2 text-xs font-sans">
                 <h1 className=" xl:px-3 px-1 py-1 rounded-md bg-[#E9E3F3]">
                   News
                 </h1>
-                <h1 className=" xl:px-3 px-1 py-1 rounded-md bg-[#f0f0f0]">
+                <h1 className=" xl:px-3 px-1 py-1 rounded-md bg-[#f0f0f0] font-sans">
                   Toy fight partner With Cult Gaia for New App
                 </h1>
               </div>
-              <div className="flex justify-end gap-2 text-xs">
+              <div className="flex justify-end gap-2 text-xs font-sans">
                 <h1 className=" xl:px-3 px-1 py-1 rounded-md bg-[#FFF490]">
                   Open Position
                 </h1>

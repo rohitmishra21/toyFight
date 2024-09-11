@@ -4,13 +4,13 @@ const Store = () => {
   return (
     <>
       <div className="w-full min-h-[100vh]">
-        <div className="h-1/2 px-8 w-full items-start flex pt-32">
-          <div className="one text-[2.3vw] w-1/2">
+        <div className="xl:h-1/2 px-8 w-full items-start xl:flex xl:pt-32 pt-16">
+          <div className="one xl:text-[2.3vw] text-2xl font-normal xl:w-1/2">
             <h1>
               Welcome to the Official <br /> ToyFight Toy®Store
             </h1>
           </div>
-          <div className="two text-[1.2vw] text-gray-600 w-1/2">
+          <div className="two xl:text-[1.2vw] pt-7 text-xl text-gray-600 xl:w-1/2">
             Welcome to our Store, where every item has a story, and every story
             is slightly off.
             <br />
@@ -22,7 +22,7 @@ const Store = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-4 gap-1 grid-rows-4 h-[300vh] px-12 pt-24">
+        <div className="w-full grid xl:grid-cols-4 md:grid-cols-2 md:min-h-[750vh] md:grid-rows-8 gap-1 xl:grid-rows-4 xl:h-[300vh] min-h-[1500vh] px-8  xl:px-12 pt-24 lg:grid-cols-3 lg:grid-rows-5 lg:min-h-[500vh] ">
           <div className="w-[100%] h-[100%] bg-[url('https://images.prismic.io/toyfight/Zk8PaSol0Zci9YeX_shp-prd-drp.jpg?auto=format%2Ccompress&rect=102%2C0%2C995%2C1200&fit=clip')] bg-cover bg-center ">
             <div className="flex flex-col items-start gap-2 p-3">
               <h1 className="bg-[#D9D6D1] one py-1 rounded-md px-4 ">

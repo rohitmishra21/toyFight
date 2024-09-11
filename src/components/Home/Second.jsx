@@ -43,7 +43,7 @@ const Second = () => {
               </h1>
             </div>
           </div>
-          <div className="xl:w-1/2 lg:w-1/2 xl:pt-12  xl:h-full xl:pr-8 xl:flex flex-col  items-end">
+          <div className="xl:w-1/2 one lg:w-1/2 xl:pt-12  xl:h-full xl:pr-8 xl:flex flex-col  items-end">
             <div className="big xl:opacity-0">
               <h1 className="xl:text-[3vw] sm:text-[5vw] lg:text-[4vw] text-[8vw] text-end leading-tight xl:none capitalize">
                 We have our <br className="xl:hidden" /> partners solve

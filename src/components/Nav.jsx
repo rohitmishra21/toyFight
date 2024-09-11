@@ -1,8 +1,10 @@
 import React from "react";
 import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+
 const Nav = () => {
   const [show, setShow] = useState(false);
+  const [menu, setMenu] = useState(false)
 
   const audioRef = useRef(null);
   const reff = useRef(null);
@@ -21,6 +23,8 @@ const Nav = () => {
   function leave() {
     setShow((per) => !per);
   }
+
+
   return (
     <>
       <audio src="https://toyfight.co/audio/button/fx.mp3" ref={reff}></audio>
@@ -28,7 +32,7 @@ const Nav = () => {
         ref={audioRef}
         src="https://toyfight.co/audio/header/fx.mp3"
       ></audio>
-      <nav className="z-50 w-full fixed one  xl:flex lg:flex hidden h-20 justify-between items-center px-8">
+      <nav className="z-50 w-full fixed one md:flex   xl:flex lg:flex hidden h-20 justify-between items-center px-8">
         <div
           className="cursor-pointer"
           onMouseEnter={toyfight}
@@ -36,7 +40,7 @@ const Nav = () => {
           onMouseMove={playAudio}
         >
           <h1
-            className="bg-[#212826] text-gray-200 px-4   py-3 text-xs rounded-md"
+            className="bg-[#212826] text-gray-200 px-4  py-3 text-xs rounded-md"
             style={{
               display: show ? "none" : "block",
             }}
@@ -135,6 +139,91 @@ const Nav = () => {
         <div>
           <h1>Press/for?</h1>
         </div>
+      </nav>
+      <nav className="flex xl:hidden md:hidden justify-center gap-3 px-1">
+        <h1 className="px-1 py-1 lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase">
+          toyfight
+        </h1>
+      <div className="flex gap-2 items-center">
+      <NavLink
+            to="/service"
+            className={({ isActive }) =>
+              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+                isActive ? "text-white" : "text-black"
+              }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
+            }
+          >
+            <div onMouseEnter={playmuted}>
+              <div className="overflow-hidden h-4">
+                <h1 className="group-hover:-translate-y-[100%] transition-all">
+                  Service
+                </h1>
+                <h1 className=" translate-y-[100%] group-hover:-translate-y-[100%] transition-all">
+                  Service
+                </h1>
+              </div>
+            </div>
+        </NavLink>
+        <NavLink
+            to="/work"
+            className={({ isActive }) =>
+              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+                isActive ? "text-white" : "text-black"
+              }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
+            }
+          >
+            <div onMouseEnter={playmuted}>
+              <div className="overflow-hidden h-4">
+                <h1 className="group-hover:-translate-y-[100%] transition-all">
+                  Work
+                </h1>
+                <h1 className=" translate-y-[100%] group-hover:-translate-y-[100%] transition-all">
+                  Work
+                </h1>
+              </div>
+            </div>
+        </NavLink>
+        <NavLink
+            to="/connect"
+            className={({ isActive }) =>
+              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+                isActive ? "text-white" : "text-black"
+              }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
+            }
+          >
+            <div onMouseEnter={playmuted}>
+              <div className="overflow-hidden h-4">
+                <h1 className="group-hover:-translate-y-[100%] transition-all">
+                  Connect
+                </h1>
+                <h1 className=" translate-y-[100%] group-hover:-translate-y-[100%] transition-all">
+                  Connect
+                </h1>
+              </div>
+            </div>
+        </NavLink>
+        <NavLink
+            to="/store"
+            className={({ isActive }) =>
+              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+                isActive ? "text-white" : "text-black"
+              }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
+            }
+          >
+            <div onMouseEnter={playmuted}>
+              <div className="overflow-hidden h-4">
+                <h1 className="group-hover:-translate-y-[100%] transition-all">
+                  store
+                </h1>
+                <h1 className=" translate-y-[100%] group-hover:-translate-y-[100%] transition-all">
+                  store
+                </h1>
+              </div>
+            </div>
+        </NavLink>
+    
+      </div>
+      
       </nav>
     </>
   );

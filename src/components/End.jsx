@@ -28,7 +28,7 @@ const End = () => {
         });
       }, []);
   return (
-    <div className="h-fit  bg-[#F1EDE7] ">
+    <div className="h-fit one bg-[#F1EDE7] ">
     <div className="last overflow-hidden flex justify-center pt-12 items-center gap-3 xl:text-2xl">
       <h1 className="elem translate-y-[100%] overflow-x-hidden xl:px-3 px:2 py-1 bg-white">
         The
