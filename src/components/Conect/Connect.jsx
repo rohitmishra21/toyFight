@@ -1,10 +1,14 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Connect = () => {
   return (
     <>
       <div className="w-full relative xl:h-screen min-h-[100vh] one bg-[#FAF6EF]">
-        <div className="xl:hidden  flex-col h-screen justify-between py-7 sm:hidden gap-5 flex ">
+        <motion.div 
+        initial={{height:0}}
+        whileInView={{height:"100%"}}
+        transition={{duration:1}}
+        className="xl:hidden overflow-hidden  flex-col h-screen justify-between py-7 sm:hidden gap-5 flex ">
           <div className=" flex-col   gap-5 flex">
             <div className="flex items-center  pt-12 gap-3 tracking-tighter">
               <h1 className=" px-3 py-2 z-30 leading-none  text-3xl bg-[#F1EDE7]">
@@ -54,14 +58,18 @@ const Connect = () => {
             </div>
           </div>
 
-          <div className="two capitalize">
+          <motion.div className="two capitalize">
             <h1 className="py-5 font-sans capitalize px-9 bg-[#E9E3F3] rounded-full text-sm">
               <span className="bg-white px-1">>/</span> Leave us a message
             </h1>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="flex sm:flex-col  xl:flex-row  sm:h-screen xl:h-1/2 items-start xl:items-center gap-2 xl:px-12 xl:justify-between sm:justify-around  text-[2.2vw]">
-          <div className="xl:flex hidden sm:flex z-20 flex-col gap-2">
+          <motion.div 
+           initial={{height:0}}
+           whileInView={{height:"100%"}}
+           transition={{duration:1}}
+          className="xl:flex hidden overflow-hidden sm:flex z-20 flex-col gap-2">
             <div className="flex items-center pt-32 gap-2 tracking-tighter">
               <h1 className=" px-9 py-2  leading-none  rounded-full bg-[#F1EDE7]">
                 Looking
@@ -104,7 +112,7 @@ const Connect = () => {
                 Newbiz@Toyfight.co 😊
               </h1>
             </div>
-          </div>
+          </motion.div>
           <div className="two capitalize sm:block xl:block hidden">
             <h1 className="py-5 font-sans capitalize px-9 bg-[#E9E3F3] rounded-full text-sm">
               <span className="bg-white px-1">>/</span> Leave us a message
@@ -112,8 +120,20 @@ const Connect = () => {
           </div>
         </div>
 
-        <div className="h-1/2 xl:flex hidden font-sans justify-between items-center px-16">
-          <div className="bg-[#FFD8F5] w-60 flex flex-col items-start px-5 py-3 gap-3 text-xs h-32">
+        <motion.div
+          initial={{
+            scaleY:0
+          }}
+          whileInView={{
+            scaleY:1
+          }}
+          transition={{
+            duration:1
+          }}
+            className="h-1/2 xl:flex hidden font-sans justify-between items-center px-16">
+          <div
+          
+          className="bg-[#FFD8F5] w-60 flex flex-col items-start px-5 py-3 gap-3 text-xs h-32">
             <h1 className="px-2 bg-white">for new project</h1>
             <h1>newbiz@toyfight.co</h1>
             <h1 className="px-2 bg-white">gernel</h1>
@@ -124,7 +144,7 @@ const Connect = () => {
             <h1>Art Director</h1>
             <h1>Digital Designer</h1>
           </div>
-        </div>
+        </motion.div>
         <div className="xl:w-[32%] w-[100%] sm:w-[40%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <video
             autoPlay

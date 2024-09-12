@@ -1,5 +1,5 @@
 import React from "react";
-
+import{ motion} from "framer-motion"
 const Store = () => {
   return (
     <>
@@ -22,7 +22,8 @@ const Store = () => {
           </div>
         </div>
 
-        <div className="w-full grid xl:grid-cols-4 md:grid-cols-2 md:min-h-[750vh] md:grid-rows-8 gap-1 xl:grid-rows-4 xl:h-[300vh] min-h-[1500vh] px-8  xl:px-12 pt-24 lg:grid-cols-3 lg:grid-rows-5 lg:min-h-[500vh] ">
+        <motion.div 
+        className="w-full  grid xl:grid-cols-4 md:grid-cols-2 md:min-h-[750vh] md:grid-rows-8 gap-1 xl:grid-rows-4 xl:h-[300vh] min-h-[1500vh] px-8  xl:px-12 pt-24 lg:grid-cols-3 lg:grid-rows-5 lg:min-h-[500vh] xl:min-h-[140vh] ">
           <div className="w-[100%] h-[100%] bg-[url('https://images.prismic.io/toyfight/Zk8PaSol0Zci9YeX_shp-prd-drp.jpg?auto=format%2Ccompress&rect=102%2C0%2C995%2C1200&fit=clip')] bg-cover bg-center ">
             <div className="flex flex-col items-start gap-2 p-3">
               <h1 className="bg-[#D9D6D1] one py-1 rounded-md px-4 ">
@@ -175,7 +176,7 @@ const Store = () => {
             </div>
           </div>
     
-        </div>
+        </motion.div>
       </div>
     </>
   );

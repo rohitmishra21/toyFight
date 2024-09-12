@@ -1,10 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const One = () => {
   return (
     <>
       <section className="section-1">
-        <div className="two w-full  bg-[#FAF6EF]">
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            staggerChildren: 1,
+          }}
+          className="two w-full  bg-[#FAF6EF]"
+        >
           <div className="xl:block md:block hidden ">
             <h1 className="xl:text-[7vw] md:text-7xl pt-28 tracking-tight px-5 font-light">
               Where Originality
@@ -33,7 +49,9 @@ const One = () => {
                 alt=""
                 className="w-40"
               />
-              <h1 className="xl:text-[7vw]  md:text-7xl tracking-tight px-5 ">Authenticity</h1>
+              <h1 className="xl:text-[7vw]  md:text-7xl tracking-tight px-5 ">
+                Authenticity
+              </h1>
             </div>
           </div>
           <div className="xl:hidden md:hidden px-2  block">
@@ -90,13 +108,23 @@ const One = () => {
               understanding of user's needs and aspirations.
             </h1>
           </div>
-        </div>
+        </motion.div>
       </section>
+
       <section className="section-2 two px-8 bg-[#FAF6EF]">
         <div className="w-full  min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-[100%] relative xl:flex md:flex justify-between">
             <div className="bg-black rounded-md xl:w-[25%] md:w-[45%]  flex justify-center items-center h-[80vh]">
-              <div className=" w-[70%] h-[70%] rounded-md">
+              <motion.div
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                }}
+                transition={{ duration: 1 }}
+                className=" w-[70%] h-[70%] rounded-md"
+              >
                 <video
                   autoPlay
                   muted
@@ -104,9 +132,16 @@ const One = () => {
                   src="https://res.cloudinary.com/durdzswls/video/upload/q_90/v1/services/strategy-services.webm?_a=DATAdtAAZAA0"
                   className="w-full h-full"
                 ></video>
-              </div>
+              </motion.div>
             </div>
-            <div className="xl:w-[64%] md:w-[64%] px-2 py-3">
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              transition={{
+                duration: 1,
+              }}
+              className="xl:w-[64%] md:w-[64%] px-2 py-3"
+            >
               <div className="flex pt-4 items-center gap-2">
                 <h1 className="xl:text-[1.3vw] bg-[#F1EDE7] one">(01)</h1>
                 <h1 className="xl:text-[3vw] px-3 bg-[#F1EDE7] py-1 one ">
@@ -147,12 +182,26 @@ const One = () => {
                   </div>
                 </div>
                 <div className=" xl:flex md:flex justify-between">
-                  <h1 className="leading-none px-2 text-xl py-4 xl:text-[1.2vw] xl:w-[30%] md:w-[70%] text-gray-700  ">
-                    We specialise in creating branding that resonates and
-                    connects. Our user experience design is focused on
-                    delivering seamless interactions, while our interface design
-                    marries functionality with visual appeal.
-                  </h1>
+                  <motion.div
+                    initial={{
+                      height: 0,
+                    }}
+                    whileInView={{
+                      height: "100%",
+                    }}
+                    transition={{
+                      duration: 3,
+                    }}
+                    className="  overflow-hidden"
+                  >
+                    <h1 className="leading-none px-2 text-xl py-4 xl:text-[1.2vw] xl:w-[30%] md:w-[70%] text-gray-700  ">
+                      We specialise in creating branding that resonates and
+                      connects. Our user experience design is focused on
+                      delivering seamless interactions, while our interface
+                      design marries functionality with visual appeal.
+                    </h1>
+                  </motion.div>
+
                   <div className="flex px-2 py-4 items-start xl:items-end flex-col gap-2 bottom-8">
                     <h1 className=" pb-4  xl:text-end">WORK</h1>
                     <h1 className="bg-[#F1EDE7] px-1 rounded-md  one text-xs xl:text-end">
@@ -164,14 +213,28 @@ const One = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
       <section className="section-3 two px-8 bg-[#FAF6EF]">
         <div className="w-full  min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-[100%] relative xl:flex md:flex justify-between">
-            <div className="xl:w-[64%] md:w-[64%]">
+            <motion.div
+              initial={{
+                scaleX: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                scaleX: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="xl:w-[64%] md:w-[64%]"
+            >
               <div className="flex items-center gap-2">
                 <h1 className="text-xl xl:text-[1.3vw] bg-[#F1EDE7] one">
                   (02)
@@ -210,12 +273,26 @@ const One = () => {
                   </div>
                 </div>
                 <div className=" xl:flex md:flex justify-between py-4">
-                  <h1 className="leading-none xl:text-[1.2vw] text-xl px-2  xl:w-[30%] md:w-[70%] text-gray-700  ">
-                    We specialise in creating branding that resonates and
-                    connects. Our user experience design is focused on
-                    delivering seamless interactions, while our interface design
-                    marries functionality with visual appeal.
-                  </h1>
+                  <motion.div
+                    initial={{
+                      height: 0,
+                    }}
+                    whileInView={{
+                      height: "100%",
+                    }}
+                    transition={{
+                      duration: 3,
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <h1 className="leading-none xl:text-[1.2vw] text-xl px-2  xl:w-[30%] md:w-[70%] text-gray-700  ">
+                      We specialise in creating branding that resonates and
+                      connects. Our user experience design is focused on
+                      delivering seamless interactions, while our interface
+                      design marries functionality with visual appeal.
+                    </h1>
+                  </motion.div>
+
                   <div className="flex items-start xl:items-end px-2 py-4 xl:py-0 flex-col gap-2 bottom-8">
                     <h1 className=" pb-4 md:text-end  xl:text-end">WORK</h1>
                     <h1 className="bg-[#F1EDE7] px-1 rounded-md  one text-xs md:text-end xl:text-end">
@@ -227,9 +304,20 @@ const One = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="bg-black rounded-md xl:w-[25%] md:w-[45%]  flex justify-center items-center h-[80vh]">
-              <div className=" w-[70%] h-[70%] rounded-md">
+              <motion.div
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 1,
+                }}
+                className=" w-[70%] h-[70%] rounded-md"
+              >
                 <video
                   autoPlay
                   muted
@@ -237,18 +325,35 @@ const One = () => {
                   src="https://res.cloudinary.com/durdzswls/video/upload/q_90/v1/services/design-new-services.webm?_a=DATAdtAAZAA0"
                   className="w-full h-full"
                 ></video>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="section-4 two px-8 bg-[#FAF6EF]">
         <div className="w-full  min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-[100%] relative md:flex xl:flex justify-between">
             <div className="bg-black rounded-md xl:w-[25%] md:w-[45%]  flex justify-center items-center h-[80vh]">
-              <div className=" w-[70%] h-[70%] rounded-md bg-[url('https://images.prismic.io/toyfight/ZjyZekMTzAJOCpsH_cult-gaia-1-.jpg?auto=format%2Ccompress&w=450&h=auto&fit=clip')] bg-cover bg-center bg-no-repeat"></div>
+              <motion.div
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                }}
+                transition={{ duration: 1 }}
+                className=" w-[70%] h-[70%] rounded-md bg-[url('https://images.prismic.io/toyfight/ZjyZekMTzAJOCpsH_cult-gaia-1-.jpg?auto=format%2Ccompress&w=450&h=auto&fit=clip')] bg-cover bg-center bg-no-repeat"
+              ></motion.div>
             </div>
-            <div className="xl:w-[64%] md:w-[64%]  px-2 py-4">
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              transition={{
+                duration: 1,
+              }}
+              className="xl:w-[64%] md:w-[64%]  px-2 py-4"
+            >
               <div className="flex items-center gap-2">
                 <h1 className="text-xl xl:text-[1.3vw] bg-[#F1EDE7] one">
                   (03)
@@ -285,13 +390,27 @@ const One = () => {
                   </div>
                 </div>
                 <div className=" xl:flex md:flex justify-between">
-                  <h1 className="leading-none xl:text-[1.2vw] text-xl px-2 py-4 xl:w-[30%] md:w-[70%] text-gray-700  ">
-                    Our development team excels in delivering a full spectrum of
-                    digital product creation services, tailored to meet each
-                    client's unique needs. We specialise in designing highly
-                    intuitive and responsive user interfaces, prioritising both
-                    usability and aesthetic excellence.
-                  </h1>
+                  <motion.div
+                    initial={{
+                      height: 0,
+                    }}
+                    whileInView={{
+                      height: "100%",
+                    }}
+                    transition={{
+                      duration: 3,
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <h1 className=" leading-none  xl:text-[1.2vw] text-xl px-2 py-4 xl:w-[30%] md:w-[70%] text-gray-700  ">
+                      Our development team excels in delivering a full spectrum
+                      of digital product creation services, tailored to meet
+                      each client's unique needs. We specialise in designing
+                      highly intuitive and responsive user interfaces,
+                      prioritising both usability and aesthetic excellence.
+                    </h1>
+                  </motion.div>
+
                   <div className="flex flex-col items-start xl:items-end px-2 py-4 gap-2 bottom-8">
                     <h1 className=" pb-4  text-end">WORK</h1>
                     <h1 className="bg-[#F1EDE7] px-1 rounded-md  one text-xs xl:text-end">
@@ -303,14 +422,28 @@ const One = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
       <section className="section-5 two px-8 bg-[#FAF6EF]">
         <div className="w-full px-2  min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-[100%] relative xl:flex md:flex justify-between">
-            <div className="xl:w-[64%] md:w-[64%]">
+          <motion.div
+              initial={{
+                scaleX: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                scaleX: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="xl:w-[64%] md:w-[64%]"
+            >
               <div className="flex items-center gap-2">
                 <h1 className="text-xl xl:text-[1.3vw] bg-[#F1EDE7] one">
                   (04)
@@ -348,6 +481,12 @@ const One = () => {
                   </div>
                 </div>
                 <div className=" xl:flex md:flex py-4 justify-between">
+                  <motion.div
+                   initial={{height:0}}
+                   whileInView={{height:"100%"}}
+                   transition={{duration:3}}
+                   className="overflow-hidden"
+                  >
                   <h1 className="leading-none px-2 text-xl xl:text-[1.2vw] xl:w-[30%] md:w-[70%] text-gray-700  ">
                     We employ a blend of creativity, strategic insight, and
                     technology to ensure brands stay top of mind. Our approach
@@ -356,6 +495,8 @@ const One = () => {
                     setting the standard for what digital storytelling can
                     achieve.
                   </h1>
+                  </motion.div>
+                 
                   <div className="flex flex-col items-start py-4 xl:items-end px-2 gap-2 bottom-8">
                     <h1 className=" pb-4  text-end">WORK</h1>
                     <h1 className="bg-[#F1EDE7] px-1 rounded-md  one text-xs xl:text-end">
@@ -367,7 +508,7 @@ const One = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="bg-black rounded-md xl:w-[25%] md:w-[45%]  flex justify-center items-center h-[80vh]">
               <div className=" w-[70%] h-[70%] rounded-md">
                 <video
@@ -382,6 +523,7 @@ const One = () => {
           </div>
         </div>
       </section>
+
       <section className="section-6 two px-8 bg-[#FAF6EF]">
         <div className="w-full min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-full h-full  xl:flex">
@@ -390,10 +532,18 @@ const One = () => {
                 <h1 className="xl:text-[2.7vw] text-2xl px-3 rounded-lg bg-[#F1EDE7] py-1 one ">
                   Clients
                 </h1>
+                <motion.div
+                initial={{height:0}}
+                whileInView={{height:"100%"}}
+                transition={{duration:2}}
+                className="overflow-hidden"
+                >
                 <h1 className="text-2xl xl:text-[2.9vw] md:text-center xl:text-start leading-none">
                   We've Worked With Some of the World's Biggest Brands,
                   Challenger Brands, and Startups.
                 </h1>
+                </motion.div>
+               
               </div>
               <div>
                 <button className="px-8 xl:block hidden py-3 rounded-full  one uppercase">

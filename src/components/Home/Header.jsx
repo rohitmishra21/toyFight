@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
+import { motion } from "framer-motion";
 
 const Header = () => {
   const items = ["dire bonjor", "dasir boura", "☆*: .｡"];
@@ -36,14 +37,28 @@ const Header = () => {
             className="w-80"
           ></video>
         </div>
-        <div className="xl:flex justify-center one  gap-2 flex-col py-1 ">
-          <div className="flex items-center justify-center gap-2">
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+          }}
+          className="xl:flex justify-center one  gap-2 flex-col py-1 "
+        >
+          <div className="flex items-center justify-center gap-2 ">
             <h1 className=" px-9 py-2  text-[4vw]   rounded-full bg-[#F1EDE7]">
               The
             </h1>
-            <h1 className=" px-8  py-2 z-40 font-medium text-[4vw] capitalize  bg-[#F1EDE7]">
-              Unmistakeably
-            </h1>
+            <div className="relative px-8 py-2 z-40 font-medium text-[4vw] capitalize bg-[#F1EDE7] ">
+              <h1 className="blur-none">Unmistakeably</h1>
+            </div>
           </div>
           <div className="flex gap-2 justify-center items-center">
             <h1 className=" px-8  py-2   font-medium text-[4vw]  capitalize rounded-full  bg-[#F1EDE7]">
@@ -65,7 +80,7 @@ const Header = () => {
               <h1 className="text-xs">hellow@toyfight.co</h1>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
