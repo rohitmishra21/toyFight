@@ -1,26 +1,38 @@
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap'
+import gsap from "gsap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./style.css";
 
 const Slide = () => {
+  const [show, setShow] = useState(false);
 
+  const audioRef = useRef(null);
+  const reff = useRef(null);
 
+  function playAudio() {
+    audioRef.current.play();
+  }
 
+  function playmuted() {
+    reff.current.play();
+  }
 
   return (
     <>
-      <Swiper
-        slidesPerView={7.5}
-        spaceBetween={3}
-        className="mySwiper"
+      <audio src="https://toyfight.co/audio/button/fx.mp3" ref={reff}></audio>
+     
+      <Swiper slidesPerView={7.5} spaceBetween={3} className="mySwiper"
+      
       >
-        <SwiperSlide  className="name">
+        <SwiperSlide className="name"
+         onMouseEnter={playAudio}
+         onMouseLeave={playmuted}
+        >
           <div className='w-1/2 h-1/2 bg-[url("https://images.prismic.io/toyfight/ZmCDYJm069VX1fIN_alstro-cs-img-06.jpg?auto=format%2Ccompress&fit=clip")] bg-cover bg-center '></div>
         </SwiperSlide>
-        <SwiperSlide  className="name-1">
+        <SwiperSlide className="name-1">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay
@@ -31,7 +43,7 @@ const Slide = () => {
             ></video>
           </div>
         </SwiperSlide>
-        <SwiperSlide  className="name">
+        <SwiperSlide className="name">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay
@@ -42,7 +54,7 @@ const Slide = () => {
             ></video>
           </div>
         </SwiperSlide>
-        <SwiperSlide  className="name-1">
+        <SwiperSlide className="name-1">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay
@@ -53,7 +65,7 @@ const Slide = () => {
             ></video>
           </div>
         </SwiperSlide>
-        <SwiperSlide  className="name-2">
+        <SwiperSlide className="name-2">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay
@@ -64,7 +76,7 @@ const Slide = () => {
             ></video>
           </div>
         </SwiperSlide>
-        <SwiperSlide  className="name-2">
+        <SwiperSlide className="name-2">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay
@@ -75,10 +87,10 @@ const Slide = () => {
             ></video>
           </div>
         </SwiperSlide>
-        <SwiperSlide  className="name-1">
+        <SwiperSlide className="name-1">
           <div className='w-1/2 h-1/2 bg-[url("https://images.prismic.io/toyfight/ZkStOCol0Zci9Kbh_senreve-9.jpg?auto=format%2Ccompress&fit=clip")] bg-cover bg-center '></div>
         </SwiperSlide>
-        <SwiperSlide  className="name">
+        <SwiperSlide className="name">
           <div className="w-1/2  h-1/2">
             <video
               autoPlay

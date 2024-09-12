@@ -8,7 +8,7 @@ import Root from "./Root.jsx";
 import Header from "./components/Home/Header.jsx";
 import Second from "./components/Home/Second.jsx";
 import Fotter from "./components/Home/Fotter.jsx";
-import One from "./components/Service/one.jsx";
+import One from "./components/Service/One.jsx";
 import Work from './components/Work/Work.jsx'
 import Connect from "./components/Conect/Connect.jsx";
 import Store from "./components/Store/Store.jsx";

@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Loader from "../Loader/Loader";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const One = () => {
   return (
     <>
-    <Loader/>
+      <Loader />
       <section className="section-1">
         <motion.div
           initial={{
@@ -432,7 +433,7 @@ const One = () => {
       <section className="section-5 two px-8 bg-[#FAF6EF]">
         <div className="w-full px-2  min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-[100%] relative xl:flex md:flex justify-between">
-          <motion.div
+            <motion.div
               initial={{
                 scaleX: 0,
                 opacity: 0,
@@ -484,21 +485,21 @@ const One = () => {
                 </div>
                 <div className=" xl:flex md:flex py-4 justify-between">
                   <motion.div
-                   initial={{height:0}}
-                   whileInView={{height:"100%"}}
-                   transition={{duration:3}}
-                   className="overflow-hidden"
+                    initial={{ height: 0 }}
+                    whileInView={{ height: "100%" }}
+                    transition={{ duration: 3 }}
+                    className="overflow-hidden"
                   >
-                  <h1 className="leading-none px-2 text-xl xl:text-[1.2vw] xl:w-[30%] md:w-[70%] text-gray-700  ">
-                    We employ a blend of creativity, strategic insight, and
-                    technology to ensure brands stay top of mind. Our approach
-                    is holistic, considering every facet of the user experience
-                    to create content that captivates, convinces, and converts,
-                    setting the standard for what digital storytelling can
-                    achieve.
-                  </h1>
+                    <h1 className="leading-none px-2 text-xl xl:text-[1.2vw] xl:w-[30%] md:w-[70%] text-gray-700  ">
+                      We employ a blend of creativity, strategic insight, and
+                      technology to ensure brands stay top of mind. Our approach
+                      is holistic, considering every facet of the user
+                      experience to create content that captivates, convinces,
+                      and converts, setting the standard for what digital
+                      storytelling can achieve.
+                    </h1>
                   </motion.div>
-                 
+
                   <div className="flex flex-col items-start py-4 xl:items-end px-2 gap-2 bottom-8">
                     <h1 className=" pb-4  text-end">WORK</h1>
                     <h1 className="bg-[#F1EDE7] px-1 rounded-md  one text-xs xl:text-end">
@@ -529,28 +530,28 @@ const One = () => {
       <section className="section-6 two px-8 bg-[#FAF6EF]">
         <div className="w-full min-h-screen border-t border-gray-700 pt-10   ">
           <div className="w-full h-full  xl:flex">
-            <div className="xl:w-1/2  justify-between  flex flex-col items-start xl:pr-40">
+            <div className="xl:w-1/2  justify-between py-3 flex flex-col items-start xl:pr-40">
               <div className="flex flex-col items-start gap-5  xl:gap-24">
                 <h1 className="xl:text-[2.7vw] text-2xl px-3 rounded-lg bg-[#F1EDE7] py-1 one ">
                   Clients
                 </h1>
                 <motion.div
-                initial={{height:0}}
-                whileInView={{height:"100%"}}
-                transition={{duration:2}}
-                className="overflow-hidden"
+                  initial={{ height: 0 }}
+                  whileInView={{ height: "100%" }}
+                  transition={{ duration: 2 }}
+                  className="overflow-hidden"
                 >
-                <h1 className="text-2xl xl:text-[2.9vw] md:text-center xl:text-start leading-none">
-                  We've Worked With Some of the World's Biggest Brands,
-                  Challenger Brands, and Startups.
-                </h1>
+                  <h1 className="text-2xl xl:text-[2.9vw] md:text-center xl:text-start leading-none">
+                    We've Worked With Some of the World's Biggest Brands,
+                    Challenger Brands, and Startups.
+                  </h1>
                 </motion.div>
-               
               </div>
-              <div>
-                <button className="px-8 xl:block hidden py-3 rounded-full  one uppercase">
+              <div className="flex items-center gap-3">
+                <button className="px-8 xl:block bg-[#F1EDE7] hidden py-3 rounded-full  one uppercase">
                   view more
                 </button>
+                <IoIosArrowRoundForward className=" bg-[#F1EDE7]" size={35} />
               </div>
             </div>
             <div className="xl:w-1/2 xl:flex   py-7 ">

@@ -62,7 +62,7 @@ const Connect = () => {
 
           <motion.div className="two capitalize">
             <h1 className="py-5 font-sans capitalize px-9 bg-[#E9E3F3] rounded-full text-sm">
-              <span className="bg-white px-1">>/</span> Leave us a message
+              <span className="bg-white px-1">/</span> Leave us a message
             </h1>
           </motion.div>
         </motion.div>
@@ -117,7 +117,7 @@ const Connect = () => {
           </motion.div>
           <div className="two capitalize sm:block xl:block hidden">
             <h1 className="py-5 font-sans capitalize px-9 bg-[#E9E3F3] rounded-full text-sm">
-              <span className="bg-white px-1">>/</span> Leave us a message
+              <span className="bg-white px-1">/</span> Leave us a message
             </h1>
           </div>
         </div>
