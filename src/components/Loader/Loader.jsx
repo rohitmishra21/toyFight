@@ -7,7 +7,10 @@ const Loader = () => {
     tl.from(".text h1", {
       y: 70,
       opacity: 0,
-      duration: 0.5,
+      duration: 1,
+      onComplete:()=>{
+           gsap.set(".text h1",{display:"none"})
+      },
       stagger: 0.1,
     });
     tl.to(".loded", {
@@ -15,11 +18,12 @@ const Loader = () => {
       transformOrigin: "bottom left",
       stagger: 0.1,
       duration: 2,
+      onComplete: () => {
+        gsap.set(".loader", { display: "none" }); // loader ko animation ke baad hide karo
+      },
       ease: "power2.inOut",
     });
-    tl.to(".loader",{
-      display:"none"
-    })
+
   }, []);
 
   return (
