@@ -148,17 +148,17 @@ const Nav = () => {
 
 
 
-      <nav className="xl:hidden lg:hidden">
-      <div className="flex   justify-between px-4"
+      <nav className="xl:hidden md:hidden  lg:hidden">
+      <div className="flex py-4 items-center  justify-between px-4"
         style={{
           backgroundColor:menu ? "#E9E3F3" :"#FAF6EF"
 
         }}
       >
-            <h1 className="px-3 py-1  lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase">
+            <h1 className="px-3 py-2  lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase">
               toyfight
             </h1>
-            <h1 className="px-3 rounded-md py-1 lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase" onClick={view}> menu</h1>
+            <h1 className="px-3 rounded-md py-2 lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase" onClick={view}> menu</h1>
           </div>
         <div className="bg-[#E9E3F3] w-full gap-4 h-screen flex flex-col items-center justify-center fixed z-[9999]"
         style={{

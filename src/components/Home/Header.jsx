@@ -34,7 +34,7 @@ const Header = () => {
     <>
       <div className="w-full h-screen bg-[#FAF7EE] ">
         <Loader/>
-        <div className="flex lg:relative top-16 justify-center   mt-5">
+        <div className="flex lg:relative top-16 justify-center   ">
           <video
             src="https://res.cloudinary.com/durdzswls/video/upload/q_90/v1/spline-fallbacks/game.webm?_a=DATAdtAAZAA0"
             autoPlay
