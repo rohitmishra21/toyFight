@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 import { motion } from "framer-motion";
+import Loader from "../Loader/Loader";
 
 const Header = () => {
   const items = ["dire bonjor", "dasir boura", "☆*: .｡"];
@@ -17,17 +18,22 @@ const Header = () => {
     return () => {};
   }, []);
 
-  let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-  items.forEach((item) => {
-    tl.to(".change", {
-      text: item,
-      duration: 1,
+  useEffect(() => {
+    let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+  
+    items.forEach((item) => {
+      tl.to(".change", {
+        text: item,
+        duration: 1,
+      });
     });
-  });
+  
+    return () => {};
+  }, []);
   return (
     <>
       <div className="w-full h-screen bg-[#FAF7EE] ">
+        <Loader/>
         <div className="flex lg:relative top-16 justify-center   mt-5">
           <video
             src="https://res.cloudinary.com/durdzswls/video/upload/q_90/v1/spline-fallbacks/game.webm?_a=DATAdtAAZAA0"

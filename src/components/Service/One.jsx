@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Loader from "../Loader/Loader";
 
 const One = () => {
   return (
     <>
+    <Loader/>
       <section className="section-1">
         <motion.div
           initial={{

@@ -1,10 +1,12 @@
 import React from "react";
 import  Slide  from "./Slide";
+import Loader from "../Loader/Loader";
 
 const Work = () => {
   return (
     <>
       <section className="section-1  bg-[#FAF6EF]  w-full min-h-screen">
+        <Loader/>
         <div className=" pt-24 xl:flex xl:px-12 justify-between px-3 py-5  w-full h-1/2">
           <div className="w-1/2 xl:flex hidden flex-col items-start gap-4">
             <h1 className="text-[2.3vw] rounded-xl px-3 bg-[#F1EDE7] py-1 one  ">

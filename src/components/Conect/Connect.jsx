@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Loader from "../Loader/Loader";
 const Connect = () => {
   return (
     <>
       <div className="w-full relative xl:h-screen min-h-[100vh] one bg-[#FAF6EF]">
+        <Loader/>
         <motion.div 
         initial={{height:0}}
         whileInView={{height:"100%"}}

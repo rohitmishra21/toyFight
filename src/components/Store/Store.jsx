@@ -1,9 +1,11 @@
 import React from "react";
 import{ motion} from "framer-motion"
+import Loader from "../Loader/Loader"
 const Store = () => {
   return (
     <>
       <div className="w-full min-h-[100vh]">
+        <Loader/>
         <div className="xl:h-1/2 px-8 w-full items-start xl:flex xl:pt-32 pt-16">
           <div className="one xl:text-[2.3vw] text-2xl font-normal xl:w-1/2">
             <h1>
