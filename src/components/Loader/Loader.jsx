@@ -23,8 +23,8 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="loader pointer-events-none w-full h-screen fixed z-[99999]">
-      <div className="relative grid grid-cols-9 w-full h-screen   ">
+    <div className="loader pointer-events-none w-full h-screen fixed top-0 z-[99999]">
+      <div className="relative grid xl:grid-cols-9 w-full xl:h-screen grid-cols-4 min-h-[300vh] grid-rows-0 sm:grid-cols-5 lg:grid-cols-7 md:grid-cols-6 ">
         <div className="loded bg-black"></div>
         <div className="loded bg-black"></div>
         <div className="loded bg-black"></div>

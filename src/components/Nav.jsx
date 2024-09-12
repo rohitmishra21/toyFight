@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [show, setShow] = useState(false);
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
 
   const audioRef = useRef(null);
   const reff = useRef(null);
@@ -23,7 +23,12 @@ const Nav = () => {
   function leave() {
     setShow((per) => !per);
   }
-
+  
+ function view() {
+   setMenu((pe) => !pe)
+   console.log(menu);
+   
+ }
 
   return (
     <>
@@ -140,18 +145,38 @@ const Nav = () => {
           <h1>Press/for?</h1>
         </div>
       </nav>
-      <nav className="flex xl:hidden md:hidden justify-center gap-3 px-1">
-        <h1 className="px-1 py-1 lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase">
-          toyfight
-        </h1>
-      <div className="flex gap-2 items-center">
-      <NavLink
+
+
+
+      <nav className="xl:hidden lg:hidden">
+      <div className="flex   justify-between px-4"
+        style={{
+          backgroundColor:menu ? "#E9E3F3" :"#FAF6EF"
+
+        }}
+      >
+            <h1 className="px-3 py-1  lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase">
+              toyfight
+            </h1>
+            <h1 className="px-3 rounded-md py-1 lg:hidden bg-black text-yellow-50  font-sans xl:hidden uppercase" onClick={view}> menu</h1>
+          </div>
+        <div className="bg-[#E9E3F3] w-full gap-4 h-screen flex flex-col items-center justify-center fixed z-[9999]"
+        style={{
+          display:menu ? "flex" :"none"
+
+        }}
+        >
+           <NavLink
             to="/service"
             className={({ isActive }) =>
-              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+              `px-10 py-4 tracking-wide cursor-pointer group one uppercase  ${
                 isActive ? "text-white" : "text-black"
-              }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
+              } rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
             }
+            onClick={view}
+            style={{
+              display:menu ? "flex" :"none"
+            }}
           >
             <div onMouseEnter={playmuted}>
               <div className="overflow-hidden h-4">
@@ -167,10 +192,14 @@ const Nav = () => {
         <NavLink
             to="/work"
             className={({ isActive }) =>
-              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+              `px-10 py-4 tracking-wide cursor-pointer group one    uppercase  ${
                 isActive ? "text-white" : "text-black"
               }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
             }
+            onClick={view}
+            style={{
+              display:menu ? "flex" :"none"
+            }}
           >
             <div onMouseEnter={playmuted}>
               <div className="overflow-hidden h-4">
@@ -186,10 +215,14 @@ const Nav = () => {
         <NavLink
             to="/connect"
             className={({ isActive }) =>
-              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+              `px-10 py-4 tracking-wide cursor-pointer group one    uppercase  ${
                 isActive ? "text-white" : "text-black"
               }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
             }
+            onClick={view}
+            style={{
+              display:menu ? "flex" :"none"
+            }}
           >
             <div onMouseEnter={playmuted}>
               <div className="overflow-hidden h-4">
@@ -202,13 +235,18 @@ const Nav = () => {
               </div>
             </div>
         </NavLink>
+         
         <NavLink
             to="/store"
             className={({ isActive }) =>
-              `px-1 text-xs border-b cursor-pointer group  overflow-y-hidden   uppercase  ${
+              `px-10 py-4 tracking-wide cursor-pointer group one    uppercase  ${
                 isActive ? "text-white" : "text-black"
               }  rounded-full ${isActive ? "bg-black" : "bg-[#F1EDE7]"}  `
             }
+            onClick={view}
+            style={{
+              display:menu ? "flex" :"none"
+            }}
           >
             <div onMouseEnter={playmuted}>
               <div className="overflow-hidden h-4">
@@ -221,9 +259,7 @@ const Nav = () => {
               </div>
             </div>
         </NavLink>
-    
-      </div>
-      
+        </div>
       </nav>
     </>
   );
